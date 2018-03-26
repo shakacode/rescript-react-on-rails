@@ -1,6 +1,6 @@
 {
   "name": "bs-react-on-rails",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "BuckleScript bindings to react-on-rails",
   "main": "src/ReactOnRails.re",
   "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
