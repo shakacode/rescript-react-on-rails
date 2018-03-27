@@ -27,10 +27,12 @@
     "ocaml",
     "bucklescript"
   ],
+  "homepage": "https://github.com/shakacode/bs-react-on-rails",
   "repository": {
     "type": "git",
     "url": "https://github.com/shakacode/bs-react-on-rails.git"
   },
+  "bugs": "https://github.com/shakacode/bs-react-on-rails/issues",
   "peerDependencies": {
     "bs-platform": "^2.2.3",
     "react-on-rails": "^10.1.3",
