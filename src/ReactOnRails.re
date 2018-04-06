@@ -33,3 +33,19 @@ let reactOnRailsPageLoaded = () => reactOnRails##reactOnRailsPageLoaded();
 
 let authenticityToken = () =>
   reactOnRails##authenticityToken() |> Js.Nullable.toOption;
+
+type defaultContext = {
+  .
+  "host": string,
+  "href": string,
+  "httpAcceptLanguage": string,
+  "i18nDefaultLocale": string,
+  "i18nLocale": string,
+  "inMailer": Js.boolean,
+  "location": string,
+  "pathname": string,
+  "port": int,
+  "scheme": string,
+  "search": Js.nullable(string),
+  "serverSide": Js.boolean,
+};
