@@ -12,3 +12,19 @@ let registerWithOptions: (string, component({..}, {..}), options) => unit;
 let reactOnRailsPageLoaded: unit => unit;
 
 let authenticityToken: unit => option(string);
+
+type defaultContext = {
+  .
+  "host": string,
+  "href": string,
+  "httpAcceptLanguage": string,
+  "i18nDefaultLocale": string,
+  "i18nLocale": string,
+  "inMailer": Js.boolean,
+  "location": string,
+  "pathname": string,
+  "port": int,
+  "scheme": string,
+  "search": Js.nullable(string),
+  "serverSide": Js.boolean,
+};
