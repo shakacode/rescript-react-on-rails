@@ -20,11 +20,11 @@ type defaultContext = {
   "httpAcceptLanguage": string,
   "i18nDefaultLocale": string,
   "i18nLocale": string,
-  "inMailer": Js.boolean,
+  "inMailer": bool,
   "location": string,
   "pathname": string,
   "port": int,
   "scheme": string,
   "search": Js.nullable(string),
-  "serverSide": Js.boolean,
+  "serverSide": bool,
 };

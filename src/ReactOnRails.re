@@ -3,7 +3,7 @@ type component('props, 'context) =
 
 type options = {traceTurbolinks: bool};
 
-type optionsJs = {. "traceTurbolinks": Js.boolean};
+type optionsJs = {. "traceTurbolinks": bool};
 
 type reactOnRails('props, 'context) = {
   .
@@ -20,7 +20,7 @@ let register = (name: string, component: component('props, 'context)) =>
   reactOnRails##register([(name, component)] |> Js.Dict.fromList);
 
 let mapOptionsToJs = (options: options) : optionsJs => {
-  "traceTurbolinks": options.traceTurbolinks |> Js.Boolean.to_js_boolean,
+  "traceTurbolinks": options.traceTurbolinks,
 };
 
 let registerWithOptions =
@@ -41,11 +41,11 @@ type defaultContext = {
   "httpAcceptLanguage": string,
   "i18nDefaultLocale": string,
   "i18nLocale": string,
-  "inMailer": Js.boolean,
+  "inMailer": bool,
   "location": string,
   "pathname": string,
   "port": int,
   "scheme": string,
   "search": Js.nullable(string),
-  "serverSide": Js.boolean,
+  "serverSide": bool,
 };
