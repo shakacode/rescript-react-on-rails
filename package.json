@@ -1,7 +1,7 @@
 {
-  "name": "bs-react-on-rails",
-  "version": "0.2.0",
-  "description": "BuckleScript bindings to react-on-rails",
+  "name": "rescript-react-on-rails",
+  "version": "0.0.0",
+  "description": "ReScript bindings to react-on-rails",
   "main": "src/ReactOnRails.re",
   "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
   "license": "MIT",
@@ -27,12 +27,12 @@
     "ocaml",
     "bucklescript"
   ],
-  "homepage": "https://github.com/shakacode/bs-react-on-rails",
+  "homepage": "https://github.com/shakacode/rescript-react-on-rails",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakacode/bs-react-on-rails.git"
+    "url": "https://github.com/shakacode/rescript-react-on-rails.git"
   },
-  "bugs": "https://github.com/shakacode/bs-react-on-rails/issues",
+  "bugs": "https://github.com/shakacode/rescript-react-on-rails/issues",
   "peerDependencies": {
     "bs-platform": "^2.2.2 || ^3.0.0",
     "react-on-rails": "^10.1.3",
