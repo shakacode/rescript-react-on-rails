@@ -15,7 +15,7 @@ type reactOnRails<'props, 'context> = {
 external reactOnRails: reactOnRails<'props, 'context> = "default"
 
 let register = (name: string, component: component<'props, 'context>) =>
-  reactOnRails["register"](list{(name, component)} -> Js.Dict.fromList)
+  reactOnRails["register"](list{(name, component)}->Js.Dict.fromList)
 
 let mapOptionsToJs = (options: options): optionsJs =>
   {
@@ -27,13 +27,13 @@ let registerWithOptions = (
   component: component<'props, 'context>,
   options: options,
 ) => {
-  reactOnRails["setOptions"](options -> mapOptionsToJs)
+  reactOnRails["setOptions"](options->mapOptionsToJs)
   register(name, component)
 }
 
 let reactOnRailsPageLoaded = () => reactOnRails["reactOnRailsPageLoaded"]()
 
-let authenticityToken = () => reactOnRails["authenticityToken"]() |> Js.Nullable.toOption
+let authenticityToken = () => reactOnRails["authenticityToken"]()->Js.Nullable.toOption
 
 type defaultContext = {
   "host": string,
