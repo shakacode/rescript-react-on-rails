@@ -1,4 +1,5 @@
-type component<'props, 'context> = ({..} as 'props, {..} as 'context) => React.component<'props>
+type return = (. unit) => React.element
+type component<'props, 'context> = ({..} as 'props, {..} as 'context) => return
 
 type options = {traceTurbolinks: bool}
 
@@ -29,8 +30,7 @@ let registerWithOptions = (
 
 let reactOnRailsPageLoaded = reactOnRails.reactOnRailsPageLoaded
 
-let authenticityToken = () =>
-  reactOnRails.authenticityToken(.)->Js.Nullable.toOption
+let authenticityToken = () => reactOnRails.authenticityToken(.)->Js.Nullable.toOption
 
 type defaultContext = {
   "host": string,

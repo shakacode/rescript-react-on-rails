@@ -1,4 +1,5 @@
-type component<'props, 'context> = ('props, 'context) => React.component<'props>
+type return = (. unit) => React.element
+type component<'props, 'context> = ({..} as 'props, {..} as 'context) => return
   constraint 'props = {..} constraint 'context = {..}
 
 type options = {traceTurbolinks: bool}

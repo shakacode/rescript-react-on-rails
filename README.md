@@ -18,8 +18,11 @@ type props = {"name": string};
 
 type context = {"host": string};
 
-let component = (props: props, context: context) =>
-  <Page name={props["name"]} host={context["host"]} />
+let component = (props: props, context: context) => {
+  // ReactOnRails require a component as return (not a react element)
+  // That can be done by wrapping the return with a function
+  (. ()) => <Page name={props["name"]} host={context["host"]} />
+}
 
 ReactOnRails.register("App", component)
 ```
