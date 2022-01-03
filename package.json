@@ -6,8 +6,8 @@
   "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn preversion && rescript build -w",
-    "build": "yarn preversion && rescript build",
+    "start": "yarn preversion && rescript build -w -with-deps",
+    "build": "yarn preversion && rescript build -with-deps",
     "clean": "rescript clean",
     "fmt": "rescript format -all",
     "preversion": "yarn run clean && yarn run fmt"

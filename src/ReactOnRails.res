@@ -1,39 +1,36 @@
-type component<'props, 'context> = ({..} as 'props, {..} as 'context) => React.element
+type component<'props, 'context> = ({..} as 'props, {..} as 'context) => React.component<'props>
 
 type options = {traceTurbolinks: bool}
 
-type optionsJs = {"traceTurbolinks": bool}
-
 type reactOnRails<'props, 'context> = {
-  "register": @send (Js.Dict.t<component<'props, 'context>> => unit),
-  "setOptions": @send (optionsJs => unit),
-  "authenticityToken": @send (unit => Js.nullable<string>),
-  "reactOnRailsPageLoaded": @send (unit => unit),
+  register: (. Js.Dict.t<component<'props, 'context>>) => unit,
+  setOptions: (. options) => unit,
+  authenticityToken: (. unit) => Js.nullable<string>,
+  reactOnRailsPageLoaded: (. unit) => unit,
 }
 
 @module("react-on-rails")
 external reactOnRails: reactOnRails<'props, 'context> = "default"
 
-let register = (name: string, component: component<'props, 'context>) =>
-  reactOnRails["register"](list{(name, component)}->Js.Dict.fromList)
-
-let mapOptionsToJs = (options: options): optionsJs =>
-  {
-    "traceTurbolinks": options.traceTurbolinks,
-  }
+let register = (name: string, component: component<'props, 'context>) => {
+  let dict = Js.Dict.empty()
+  dict->Js.Dict.set(name, component)
+  reactOnRails.register(. dict)
+}
 
 let registerWithOptions = (
   name: string,
   component: component<'props, 'context>,
   options: options,
 ) => {
-  reactOnRails["setOptions"](options->mapOptionsToJs)
+  reactOnRails.setOptions(. options)
   register(name, component)
 }
 
-let reactOnRailsPageLoaded = () => reactOnRails["reactOnRailsPageLoaded"]()
+let reactOnRailsPageLoaded = reactOnRails.reactOnRailsPageLoaded
 
-let authenticityToken = () => reactOnRails["authenticityToken"]()->Js.Nullable.toOption
+let authenticityToken = () =>
+  reactOnRails.authenticityToken(.)->Js.Nullable.toOption
 
 type defaultContext = {
   "host": string,

@@ -1,4 +1,4 @@
-type component<'props, 'context> = ('props, 'context) => React.element
+type component<'props, 'context> = ('props, 'context) => React.component<'props>
   constraint 'props = {..} constraint 'context = {..}
 
 type options = {traceTurbolinks: bool}
@@ -7,7 +7,7 @@ let register: (string, component<{..}, {..}>) => unit
 
 let registerWithOptions: (string, component<{..}, {..}>, options) => unit
 
-let reactOnRailsPageLoaded: unit => unit
+let reactOnRailsPageLoaded: (. unit) => unit
 
 let authenticityToken: unit => option<string>
 
