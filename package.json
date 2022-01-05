@@ -1,9 +1,12 @@
 {
-  "name": "bs-react-on-rails",
+  "name": "rescript-react-on-rails",
   "version": "0.2.0",
   "description": "ReScript bindings to react-on-rails",
   "main": "src/ReactOnRails.res",
-  "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
+  "authors": [
+    "Alex Fedoseev <alex.fedoseev@gmail.com> (https://github.com/alexfedoseev)",
+    "Gustavo Carvalho <gsc13@tuta.io> (https://github.com/gscarv13)"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "yarn preversion && rescript build -w -with-deps",

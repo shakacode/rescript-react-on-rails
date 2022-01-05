@@ -27,8 +27,7 @@ let component = (props: props, context: context) => {
 ReactOnRails.register("App", component)
 ```
 
-See [example Rails app](https://github.com/shakacode/reason-react-on-rails-example) and [implementation commit](https://github.com/shakacode/reason-react-on-rails-example/commit/e69bed7cb5141a87edafef1b67fca1b69a48e481).
-
+See [example Rails app](https://github.com/shakacode/reason-react-on-rails-example)
 ## API
 ```rescript
 // ReactOnRails.register
@@ -37,7 +36,7 @@ ReactOnRails.register("App", component);
 // ReactOnRails.registerWithOptions
 ReactOnRails.registerWithOptions("App", component, {traceTurbolinks: true});
 
-// ReactOnRails.registerWithOptions
+// ReactOnRails.authenticityToken
 let csrfToken: option<string> = ReactOnRails.authenticityToken();
 
 // ReactOnRails.reactOnRailsPageLoaded
