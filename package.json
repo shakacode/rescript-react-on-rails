@@ -1,6 +1,6 @@
 {
   "name": "rescript-react-on-rails",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "ReScript bindings to react-on-rails",
   "main": "src/ReactOnRails.res",
   "authors": [
@@ -28,12 +28,12 @@
     "react-on-rails",
     "ocaml"
   ],
-  "homepage": "https://github.com/shakacode/bs-react-on-rails",
+  "homepage": "https://github.com/shakacode/rescript-react-on-rails",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakacode/bs-react-on-rails.git"
+    "url": "https://github.com/shakacode/rescript-react-on-rails.git"
   },
-  "bugs": "https://github.com/shakacode/bs-react-on-rails/issues",
+  "bugs": "https://github.com/shakacode/rescript-react-on-rails/issues",
   "peerDependencies": {
     "@rescript/react": "^0.10.3",
     "react-on-rails": "^10.1.3",
