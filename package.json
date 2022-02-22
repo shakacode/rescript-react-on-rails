@@ -9,11 +9,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "yarn preversion && rescript build -w -with-deps",
-    "build": "yarn preversion && rescript build -with-deps",
+    "start": "rescript build -w -with-deps",
+    "build": "rescript build -with-deps",
     "clean": "rescript clean",
-    "fmt": "rescript format -all",
-    "preversion": "yarn run clean && yarn run fmt"
+    "fmt": "rescript format -all"
   },
   "files": [
     "src",
