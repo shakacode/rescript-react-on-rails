@@ -2,16 +2,18 @@
   "name": "rescript-react-on-rails",
   "version": "0.0.1",
   "description": "ReScript bindings to react-on-rails",
-  "main": "src/ReactOnRails.re",
-  "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
+  "main": "src/ReactOnRails.res",
+  "authors": [
+    "Alex Fedoseev <alex.fedoseev@gmail.com> (https://github.com/alexfedoseev)",
+    "Gustavo Carvalho <gsc13@tuta.io> (https://github.com/gscarv13)"
+  ],
   "license": "MIT",
   "scripts": {
-    "start": "bsb -clean-world -make-world -w",
-    "build": "bsb -clean-world -make-world",
-    "clean": "bsb -clean-world",
-    "test": "exit 0",
-    "refmt": "find -E . -regex '.+\\.rei?' -exec refmt --in-place {} \\;",
-    "preversion": "yarn run clean && yarn run refmt"
+    "start": "yarn preversion && rescript build -w -with-deps",
+    "build": "yarn preversion && rescript build -with-deps",
+    "clean": "rescript clean",
+    "fmt": "rescript format -all",
+    "preversion": "yarn run clean && yarn run fmt"
   },
   "files": [
     "src",
@@ -19,13 +21,12 @@
   ],
   "keywords": [
     "react",
-    "reason",
-    "reasonml",
-    "reason-react",
+    "rescript",
+    "rescript-react",
+    "@rescript/react",
     "rails",
     "react-on-rails",
-    "ocaml",
-    "bucklescript"
+    "ocaml"
   ],
   "homepage": "https://github.com/shakacode/rescript-react-on-rails",
   "repository": {
@@ -34,13 +35,13 @@
   },
   "bugs": "https://github.com/shakacode/rescript-react-on-rails/issues",
   "peerDependencies": {
-    "bs-platform": "^2.2.2 || ^3.0.0",
+    "@rescript/react": "^0.10.3",
     "react-on-rails": "^10.1.3",
-    "reason-react": "^0.3.4"
+    "rescript": "^9.1.4"
   },
   "devDependencies": {
-    "bs-platform": "3.0.0",
-    "react-on-rails": "10.1.4",
-    "reason-react": "0.3.4"
+    "@rescript/react": "0.10.3",
+    "react-on-rails": "12.5.1",
+    "rescript": "9.1.4"
   }
 }
