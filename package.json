@@ -1,6 +1,6 @@
 {
   "name": "rescript-react-on-rails",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "description": "ReScript bindings to react-on-rails",
   "main": "src/ReactOnRails.res",
   "authors": [
