@@ -1,0 +1,2 @@
+trusted_actions:
+  - actions/github-script
